@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Link from 'react-router-dom/Link';
+import Button from '@material-ui/core/Button';
 // Image, Icon
 import LoginImage from '../../assets/image/login-img.jpg';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -38,7 +40,9 @@ class SignIn extends Component {
                             <label htmlFor="">Password</label>
                             <input type="password" placeholder="**********" />
 
-                            <span>Forgot Password?</span>
+                            <Button component={Link} to="/signup" className="newAcount">
+                                No account?
+                            </Button>
                             <div className="button-submit">
                                 <button type="submit">Login</button>
                             </div>

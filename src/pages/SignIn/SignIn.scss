@@ -97,6 +97,17 @@
                 color:rgb(187, 187, 187);
             }
 
+            .newAcount {
+                color: #fff;
+                text-transform: none;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .newAcount:hover {
+                outline: none;
+            }
+
             .button-submit {
                 display: flex;
                 align-items: center;
