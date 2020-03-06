@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+.sign-in { 
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -10%;
+
+    img {
+        width: 70%;
+    }
+
+    .description-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        color: #222;
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: rgb(9, 1, 228);
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        
+    }
+}
+
+.right-container {
+    width: 35%;
+    background: rgb(7,0,179);
+    background: linear-gradient(0deg, rgba(7,0,179,1) 0%, rgba(43,34,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(240, 240, 240);
+
+    .description-right {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 32px;
+            line-height: 2;
+            letter-spacing: 1.5px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .login-form{
+        width: 80%;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            label {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            input {
+                height: 45px;
+                margin-bottom: 15px;
+                background-color: rgb(0, 0, 180);
+                border: transparent;
+                border-radius: 15px;
+                padding-left: 20px;
+                outline: none;
+                color: #fff;
+            }
+
+            input::-webkit-input-placeholder {
+                color:rgb(187, 187, 187);
+            }
+
+            .button-submit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    outline: none;
+                    margin: 20px 0;
+                    padding: 15px 0;
+                    border: transparent;
+                    background: rgb(248, 15, 178);
+                    color: #fff;
+                    border-radius: 25px;
+                    width: 50%;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    box-shadow: -1px 2px 42px 0px rgba(245,0,196,1);
+                }
+
+                button:active {
+                    background: rgb(187, 5, 132);
+                }
+            }
+
+        }
+    }
+
+    .social-icon {
+        a {
+            color: rgb(187, 187, 187);  
+            margin-left: 2vh;
+
+            svg {
+                font-size: 2rem;
+            }
+
+            svg:hover {
+                color:rgb(248, 15, 178);
+            }
+    
+            svg:active {
+                color: rgb(187, 5, 132);
+            }
+        }
+    }
+}
