@@ -32,8 +32,8 @@ class SignIn extends Component {
 
                     <div className="login-form">
                         <form action="#">
-                            <label htmlFor="">Username</label>
-                            <input type="text" placeholder="Enter this you username" />
+                            <label htmlFor="">Email</label>
+                            <input type="text" placeholder="Enter this you email" />
 
                             <label htmlFor="">Password</label>
                             <input type="password" placeholder="**********" />
