@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
-import ButtonPlus from '../../../components/ButtonPlus/ButtonPlus'
+import React, { Component } from 'react';
+// Style bootstrap
+import Container from 'react-bootstrap/Container';
+//Components
+import ButtonPlus from '../../../components/ButtonPlus/ButtonPlus';
 
 class Main extends Component {
     render() {
         return (
             <div>
-                main screen
-                <ButtonPlus />
+                <Container>
+                    main screen
+                    <ButtonPlus />
+                </Container>
             </div>
         )
     }

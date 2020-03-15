@@ -26,15 +26,9 @@
     content: "";
     background: linear-gradient(
       45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
       #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
+      #9aabff,
+      #ab63f8
     );
     position: absolute;
     top: -2px;
@@ -81,4 +75,22 @@
       background-position: 0 0;
     }
   }
+}
+
+/* Modal create new project */
+
+.modal-content {
+    background: linear-gradient(
+      45deg,
+      #00ffd5,
+      #9aabff,
+      #ab63f8
+    );
+    border: none;
+    color: #fff;
+}
+
+.project-input {
+    background: rgb(255, 255, 255);
+    
 }
