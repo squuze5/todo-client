@@ -43,7 +43,6 @@ class ButtonPlus extends Component {
                     show={this.state.show} 
                     onHide={this.handleClose} 
                     animation={true}
-                    centered
                 >
  
                     <Modal.Header closeButton className="header-modal">
