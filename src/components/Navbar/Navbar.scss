@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 30px 250px;
+
+  .buttons-header {
+    .btn-signIn {
+        color: #1d2329;
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+
+    .btn-contact {
+      background: #2b50ed;
+      color: #f2f4fb;
+      box-shadow: 0 14px 30px 0 rgba(43, 80, 237, 0.2);
+      border: none;
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-weight: 500;
+      margin-left: 40px;
+      outline: none;
+    }
+
+    .btn-contact:hover {
+        background: #2039aa;
+    }
+  }
+}

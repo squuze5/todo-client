@@ -1,0 +1,17 @@
+.events-block {
+    border: 1px solid grey;
+    border-radius: 5px;
+    min-height: 600px;
+
+    .events-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid grey;
+        padding: 5px 10px;
+
+        h5 {
+            font-weight: 700;
+        }
+    }
+}

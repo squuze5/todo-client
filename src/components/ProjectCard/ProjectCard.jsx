@@ -55,42 +55,44 @@ class ProjectCard extends Component {
         const EditProject = this.state.editIcon;
 
         return (
-            <div className="card col-xl-4">
-                <div className="card-project" style={this.props.colorProject}>
-                    
-                    <div className="header-card">
-                        <div className="" onClick={this.editProject}>{EditProject}</div>
-                        <h5 style={showNameProject}>{this.state.projectName}</h5>
-                        <input 
-                            type="text" 
-                            style={showEditInput} 
-                            value={this.state.projectName} 
-                            onChange={e => this.onProjectChange(e.target.value)}
-                        />
-                        <SettingsIcon 
-                            className="icon-project setting-icon" 
-                            onClick={this.settingsShow}
-                        />
-                    </div>
-
-                    <div className="body-card">
-                        <div className="no-task">
-                            <FormatListBulletedIcon className="icon-todo" />
-                            <p>No new tasks found</p>
+            <div className="col-xl-4">
+                <div className="card">
+                    <div className="card-project" style={this.props.colorProject}>
+                        
+                        <div className="header-card">
+                            <div className="" onClick={this.editProject}>{EditProject}</div>
+                            <h5 style={showNameProject}>{this.state.projectName}</h5>
+                            <input 
+                                type="text" 
+                                style={showEditInput} 
+                                value={this.state.projectName} 
+                                onChange={e => this.onProjectChange(e.target.value)}
+                            />
+                            <SettingsIcon 
+                                className="icon-project setting-icon" 
+                                onClick={this.settingsShow}
+                            />
                         </div>
+
+                        <div className="body-card">
+                            <div className="no-task">
+                                <FormatListBulletedIcon className="icon-todo" />
+                                <p>No new tasks found</p>
+                            </div>
+                        </div>
+
+                        <div className="footer-card">
+                            >
+                        </div>
+
                     </div>
 
-                    <div className="footer-card">
-                        >
+                    <div className="setting-project" style={showSettings} >
+                        <DeleteForeverIcon className="setting-icon delete-icon" />
+                        <EditIcon className="setting-icon" />
+                        <PaletteIcon className="setting-icon" />
+                        <CloseIcon className="setting-icon" style={{ color: 'red' }} onClick={this.settingsClose} />
                     </div>
-
-                </div>
-
-                <div className="setting-project" style={showSettings} >
-                    <DeleteForeverIcon className="setting-icon delete-icon" />
-                    <EditIcon className="setting-icon" />
-                    <PaletteIcon className="setting-icon" />
-                    <CloseIcon className="setting-icon" style={{ color: 'red' }} onClick={this.settingsClose} />
                 </div>
             </div>
         )

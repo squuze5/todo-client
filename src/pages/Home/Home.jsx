@@ -1,36 +1,46 @@
-import React, { Component } from 'react';
-import Link from 'react-router-dom/Link';
+import React from 'react';
+import { useSpring, animated } from 'react-spring'
 
-import Button from '@material-ui/core/Button';
+// Default style / Image
 import './Home.scss';
-import VideoBG from '../../assets/video/bg-main.mp4';
+import Navbar from '../../components/Navbar/Navbar';
 
-class Home extends Component {
-    render() {
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(2000px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+
+const Home = () => {
+        const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
         return (
-            <div className="home-screen">
-                <video autoPlay loop muted className="bgvideo">
-                    <source src={VideoBG} type="video/mp4"></source>
-                </video>
+            <>
+                <Navbar />
+                <div className="home-screen">
 
-                <div className="home-text">
-                    <div className="main-text">
-                        Your personal assistant for every day :)
+                    <div className="home-content">
+                        <div className="main-text">
+                            <h3>Board app</h3>
+                            <h3>Assistant to every day</h3>
+                        </div>
+
+                        <div className="sub-text">
+                            <p>This application will help you manage to do all your daily activities very easily.</p>
+                        </div>
+
+                        <div className="buttons-block">
+                            <button className="btn-start">Get Started</button>
+                            <button className="btn-content">Contact Us</button>
+                        </div>
                     </div>
 
-                    <div>
-                        <Button component={Link} to="/login" color="primary" variant="outlined">
-                            Login
-                        </Button>
+                    <animated.div 
+                        className="home-image"
+                        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+                        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+                        style={{ transform: props.xys.interpolate(trans) }}
+                    />
 
-                        <Button component={Link} to="/signup" variant="outlined" color="primary">
-                            Sign Up
-                        </Button>
-                    </div>
+                    <div className="bg-circle"> </div>
                 </div>
-            </div>
+            </>
         )
     }
-}
-
 export default Home;

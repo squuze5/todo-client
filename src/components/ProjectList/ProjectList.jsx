@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import './ProjectList.scss';
 // import NoProject from '../../assets/image/no-project.png';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import EventsBlock from '../EventsBlock/EventsBlock';
+import LeftNavigation from '../LeftNavigation/LeftNavigation';
 
 class ProjectList extends Component {
 
@@ -27,10 +29,9 @@ class ProjectList extends Component {
     render() {
         return (
             <div className="project-list">
-                
                 <div className="row">
                     <div className="col-xl-1">
-                        nav
+                        <LeftNavigation />
                     </div>
                     <div className="col-xl-8">
                         <div className="container-fluid">
@@ -41,11 +42,14 @@ class ProjectList extends Component {
                                 <ProjectCard colorProject={this.cardColor.default} />
                                 <ProjectCard colorProject={this.cardColor.red} />
                                 <ProjectCard colorProject={this.cardColor.default} />
+                                <ProjectCard colorProject={this.cardColor.default} />
+                                <ProjectCard colorProject={this.cardColor.red} />
+                                <ProjectCard colorProject={this.cardColor.default} />
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-3">
-                        sobitiya    
+                        <EventsBlock /> 
                     </div>
                 </div>
                 
