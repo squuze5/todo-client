@@ -1,78 +1,50 @@
 import React, { Component } from 'react';
 
-// Material UI style
-import AddIcon from '@material-ui/icons/Add';
-
-//  Style bootstrap
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-// Default style
+// Default style / Icon / React-modal
 import './ButtonPlus.scss';
+import Modal from 'react-modal';
+import AddIcon from '@material-ui/icons/Add';
 
 class ButtonPlus extends Component {
 
-    state = { 
-        show: false
-    }
-
-    handleClose = () => {
-        this.setState({ 
-            show: false 
-        });
-    }
-
-    handleShow = () => {
-        this.setState({ 
-            show: true 
-        });
-    }
+    constructor () {
+        super();
+        this.state = {
+          showModal: false
+        };
+        
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+      }
+      
+      handleOpenModal () {
+        this.setState({ showModal: true });
+      }
+      
+      handleCloseModal () {
+        this.setState({ showModal: false });
+      }
 
     render() {
         return (
-            <div className="button-plus">
-                <button className="add-btn" onClick={this.handleShow}>
-                    <AddIcon className="plus-icon" />
-                </button>
-
+            <>
+                <div className="add-project">
+                    <button className="button-add" onClick={this.openModal}>
+                        <AddIcon />
+                    </button>
+                    <span>Add project</span>
+                </div>  
 
                 <Modal 
-                    show={this.state.show} 
-                    onHide={this.handleClose} 
-                    animation={true}
-                >
- 
-                    <Modal.Header closeButton className="header-modal">
-                        <Modal.Title>Create new project</Modal.Title>
-                    </Modal.Header>
-
-                    <Modal.Body className="body-modal">
-                        <Form>
-                            <Form.Group as={Row} controlId="formPlaintextPassword">
-                                <Col sm="12">
-                                    <Form.Control
-                                        className="project-input"
-                                        type="text" 
-                                        placeholder="Start typig name you project..." 
-                                    />
-                                </Col>
-                            </Form.Group>
-                        </Form>
-                    </Modal.Body>
-                    
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={this.handleClose}>
-                            Create
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-            </div>
+           isOpen={this.state.showModal}
+           contentLabel="onRequestClose Example"
+           onRequestClose={this.handleCloseModal}
+           shouldCloseOnOverlayClick={false}
+        >
+          <p>Modal text!</p>
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </Modal>
+            </>
         )
     }
 }

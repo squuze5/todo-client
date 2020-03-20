@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import './Main.scss';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ButtonPlus from '../../components/ButtonPlus/ButtonPlus';
 
 class Main extends Component {
     render() {
@@ -31,6 +32,10 @@ class Main extends Component {
                     <span>Your projects</span>
                     <h3>Welcome back, Nikolas!</h3>
                     <p>Select the project you want to work on or create a new one.</p>
+                </div>
+
+                <div className="projects-list">
+                    <ButtonPlus />
                 </div>
 
             </div>
