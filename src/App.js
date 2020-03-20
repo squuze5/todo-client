@@ -6,7 +6,7 @@ import './App.css';
 import SignUp from './pages/SignUp/SignUp';
 import Home from './pages/Home/Home';
 import SignIn from './pages/SignIn/SignIn';
-import Main from './pages/Home/Main/Main';
+import Main from './pages/Main/Main';
 
 function App() {
   return (
